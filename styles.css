@@ -1,0 +1,483 @@
+/* normalize part (начало) */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+b, strong {
+    font-weight: bolder;
+}
+sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+    sub {
+        bottom: -0.25em;
+    }
+    sup {
+        top: -0.5em;
+    }
+button, input, optgroup, select, textarea {
+    font-family: inherit;
+    font-size: 100%;
+    line-height: 1.15;
+    margin: 0;
+}
+ul {
+    list-style-position: inside;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+/* normalize part (конец) */
+
+.top, .bottom, .menu_top {
+    max-width: 1260px;
+    min-width: 360px;
+    width: 97vw;
+    margin: 0 auto;
+    display: flex;
+    /* background-color: antiquewhite;   */
+}
+
+.top {
+    flex-direction: column;
+    background-image: url('images/night_sky.jpg');
+}
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    height: 80px;
+}
+.smile {
+    height: 70px;
+}
+.menu_icon {
+    height: 3rem;
+    fill: white;
+}
+.logo label {
+    margin-left: auto;
+    display: none;
+}
+.top input {
+    display: none;
+}
+.menu_top, .menu_top_vert {
+    width: 100%;
+    background-color: #879fc5;
+}
+
+.menu_top p {
+    margin: 0;
+    padding: 0;
+}
+
+.menu_top a {
+    display: block;
+    line-height: 2.4rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #112040;
+    padding: 0 1rem;
+    margin-right: 1rem;
+}
+
+.menu_top_vert {
+    flex-direction: column;
+    max-height: 0;
+    transform-origin: top;
+    transform: scaleY(0);
+    max-width: 180px;
+    overflow: hidden;
+    position: absolute;
+    top: 80px;
+    right: 3vw;
+}
+#check_menu:checked ~ .menu_top_vert {
+    max-height: none;
+
+    transform: scaleY(100%);
+    transition: all 0.5s;
+}
+
+.menu_top_vert p {
+    margin: 0;
+    padding-left: 1rem;
+}
+.menu_top_vert a {
+    display: block;
+    line-height: 1.4rem;
+    /* padding: 0.2rem auto 0.2rem 1rem; */
+    margin: 0 0 0.2rem 0;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #112040;
+}
+.menu_top_vert a:last-of-type {
+    margin: 0;
+}
+.menu_top a:hover, .menu_top_vert a:hover {
+    background-color: #091f50;
+    color: #d2daeb;
+}
+/* .menu_top a:hover, .menu_top_vert a:hover {
+    background-color: #091f50;
+    color: #d2daeb;
+    padding: 0 1rem;
+    margin-right: 1rem;
+} */
+
+.menu_top a:last-of-type {
+    margin-right: 0;
+}
+
+.bottom {
+    background-color: #676477;
+    color: white;
+}
+
+.reserved {
+    padding: 0 1rem;
+}
+
+@media (min-width: 732px) and (max-width: 1259px) {
+    .top, .bottom, .menu_top {
+        width: 96vw;
+    }
+}
+
+@media (max-width: 731px) {
+    .top, .bottom, .menu_top {
+    width: 95vw;
+    } 
+    .logo label {
+    display: unset;
+    }
+    .menu_top {
+        display: none;
+    }
+}
+
+/* оформление мультиколоночного блока (начало) */
+.multicolumns {
+    display: flex;
+    width: 97vw;
+    margin: 0 auto 1rem auto;
+    background-color: #f9fbfc;
+    font-family: sans-serif;
+}
+.multicolumns p {
+    font-size: 0.8rem;
+    line-height: 1.1rem;
+    margin: 0;
+    color: rgb(1, 62, 80);
+    text-align: justify;
+}
+.multicolumns h3 {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    margin: 0.3rem auto;
+    color: rgb(2, 49, 63);
+}
+.multicolumns h4 {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    margin: 0.2rem auto;
+    color: rgb(2, 49, 63);
+}
+.column_I, .column_II, .column_III {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 420px;
+    padding: 0 1vw;
+    margin-bottom: 5px;
+    background-color: #f1f7f8;
+    font-size: 0.8rem;
+    line-height: 1.4rem;
+}
+.column_II {
+    margin: 0 1vw;
+}
+.column_sub_block img {
+margin: 0 1vw 1vh 0;
+}
+.column_sub_block video {
+    position: relative;
+    margin-right: 1vw;
+    margin-bottom: 0.3vh;
+    background-color: none;
+    /* z-index: 2; */
+}
+.background_video {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.column_wide {
+    width: 100%;
+    padding: 0 1vw;
+    background-color: #f1f7f8;
+}
+
+.pic_small {
+    width: 240px;
+    float: left;
+}
+
+.pic_medium {
+    width: 100%;
+    max-width: 414px;
+    float: left;
+}
+
+/* форматирование 1-го слайдера (начало) */
+.scene_1 {
+    width: 100%;
+    height: 100vh;
+    /* max-height: 414px; */
+    position: relative;
+}
+.scene_1 input {
+    display: none;
+}
+.scene_1_backstage {
+    height: inherit;
+    width: inherit;
+    background-color: rgb(248, 251, 252);
+    position: relative;
+    overflow: hidden;
+}
+.scene_1_stage {
+    height: inherit;
+    width: 100%;
+    position: absolute;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transform: scale(2);
+    z-index: -1;
+    opacity: 0;
+    transition: transform ease-in-out 1s, opacity ease-in-out 1.5s;
+}
+.scene_1_slide1 {
+    background-image: url(images/fine_arts_landscapes_australia1.jpg);
+}
+.scene_1_slide2 {
+    background-image: url(images/fine_arts_landscapes_australia2.jpg);
+}
+.scene_1_slide3 {
+    background-image: url(images/fine_arts_landscapes_australia3.jpg);
+}
+.scene_1_slide4 {
+    background-image: url(images/fine_arts_landscapes_australia4.jpg);
+}
+.scene_1_slide5 {
+    background-image: url(images/fine_arts_landscapes_australia5.jpg);
+}
+.scene_1_controls {
+    position: absolute;
+    bottom: 16px;
+    left: 50%;
+    margin-left: -40px;
+}
+.scene_1_highlighted {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    margin-left: -60px;
+    width: 150px;
+    height: 32px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.5;
+    border: none;
+    border-radius: 16px;
+}
+.scene_1_controls label {
+    display: inline-block;
+    position: relative;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: 2px solid black;
+    opacity: 0.8;
+    margin: 0 2px;
+    transition: ease-in-out 0.3s;
+}
+.scene_1_controls label:hover {
+    background: rgb(94, 94, 94);
+}
+    #scene_1_dot1:checked ~ .scene_1_controls label:nth-of-type(1),
+    #scene_1_dot2:checked ~ .scene_1_controls label:nth-of-type(2),
+    #scene_1_dot3:checked ~ .scene_1_controls label:nth-of-type(3),
+    #scene_1_dot4:checked ~ .scene_1_controls label:nth-of-type(4),
+    #scene_1_dot5:checked ~ .scene_1_controls label:nth-of-type(5) {
+    background: rgb(4, 14, 0);
+}
+    #scene_1_dot1:checked ~ .scene_1_backstage > .scene_1_slide1,
+    #scene_1_dot2:checked ~ .scene_1_backstage > .scene_1_slide2,
+    #scene_1_dot3:checked ~ .scene_1_backstage > .scene_1_slide3,
+    #scene_1_dot4:checked ~ .scene_1_backstage > .scene_1_slide4,
+    #scene_1_dot5:checked ~ .scene_1_backstage > .scene_1_slide5    {
+        transform: scale(1);
+        z-index: unset;
+        opacity: unset;
+}
+/* форматирование 1-го слайдера (конец) */
+
+/* форматирование 2-го слайдера (начало) */
+.scene_2 {
+    width: 100%;
+    height: 100vh;
+    max-height: 609px;
+    position: relative;
+}
+.scene_2 input {
+    display: none;
+}
+.scene_2_backstage {
+    height: inherit;
+    width: inherit;
+    background-color: rgb(248, 251, 252);
+    position: relative;
+    overflow: hidden;
+}
+.scene_2_stage {
+    height: inherit;
+    width: 100%;
+    position: absolute;
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transform: scale(2);
+    z-index: -1;
+    opacity: 0;
+    transition: transform ease-in-out 1s, opacity ease-in-out 1.5s;
+}
+.scene_2_slide1 {
+    background-image: url(images/fine_arts_glasses1.jpg);
+}
+.scene_2_slide2 {
+    background-image: url(images/fine_arts_glasses2.jpg);
+}
+.scene_2_slide3 {
+    background-image: url(images/fine_arts_glasses3.jpg);
+}
+.scene_2_slide4 {
+    background-image: url(images/fine_arts_glasses4.jpg);
+}
+.scene_2_slide5 {
+    background-image: url(images/fine_arts_glasses5.jpg);
+}
+.scene_2_slide6 {
+    background-image: url(images/fine_arts_glasses6.jpg);
+}
+.scene_2_slide7 {
+    background-image: url(images/fine_arts_glasses7.jpg);
+}
+.scene_2_controls {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    margin-left: -40px;
+}
+.scene_2_highlighted {
+    position: absolute;
+    bottom: 28px;
+    left: 50%;
+    margin-left: -52px;
+    width: 170px;
+    height: 32px;
+    background-color: rgb(255, 255, 255);
+    opacity: 0.5;
+    border: none;
+    border-radius: 16px;
+}
+.scene_2_controls label {
+    display: inline-block;
+    position: relative;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    border: 2px solid black;
+    opacity: 0.8;
+    margin: 0 2px;
+    transition: ease-in-out 0.3s;
+}
+.scene_2_controls label:hover {
+    background: rgb(94, 94, 94);
+}
+    #scene_2_dot1:checked ~ .scene_2_controls label:nth-of-type(1),
+    #scene_2_dot2:checked ~ .scene_2_controls label:nth-of-type(2),
+    #scene_2_dot3:checked ~ .scene_2_controls label:nth-of-type(3),
+    #scene_2_dot4:checked ~ .scene_2_controls label:nth-of-type(4),
+    #scene_2_dot5:checked ~ .scene_2_controls label:nth-of-type(5),
+    #scene_2_dot6:checked ~ .scene_2_controls label:nth-of-type(6),
+    #scene_2_dot7:checked ~ .scene_2_controls label:nth-of-type(7) {
+    background: rgb(4, 14, 0);
+}
+    #scene_2_dot1:checked ~ .scene_2_backstage > .scene_2_slide1,
+    #scene_2_dot2:checked ~ .scene_2_backstage > .scene_2_slide2,
+    #scene_2_dot3:checked ~ .scene_2_backstage > .scene_2_slide3,
+    #scene_2_dot4:checked ~ .scene_2_backstage > .scene_2_slide4,
+    #scene_2_dot5:checked ~ .scene_2_backstage > .scene_2_slide5,
+    #scene_2_dot6:checked ~ .scene_2_backstage > .scene_2_slide6,
+    #scene_2_dot7:checked ~ .scene_2_backstage > .scene_2_slide7    {
+        transform: scale(1);
+        z-index: unset;
+        opacity: unset;
+}
+/* форматирование 2-го слайдера (конец) */
+
+.pic_wide {
+    width: 50%;
+    float: left;
+}
+
+@media (min-width: 732px) and (max-width: 1259px) {
+    .multicolumns {
+        width: 96vw;
+    }
+
+    .pic_small, .pic_wide {
+        width: unset;
+        max-width: 100%;
+        float: none;
+    }
+}
+
+@media (max-width: 731px) {
+    .multicolumns {
+    width: 95vw;
+    flex-direction: column;
+    align-items: center;
+    }
+    .column_wide {
+        max-width: 420px;
+    }
+    .column_II {
+    margin: 0;
+}
+    .column_sub_block img {
+        margin: 0 0 1vh 0;
+}
+    .pic_small, .pic_wide {
+    width: unset;
+    max-width: 100%;
+    float: none;
+    }   
+}
+/* оформление мультиколоночного блока (конец) */

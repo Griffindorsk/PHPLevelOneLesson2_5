@@ -1,0 +1,82 @@
+.temp_form {
+    background-color: none;
+}
+.temp_networks {
+    display: flex;
+    flex-direction: column;
+}
+.temp_form fieldset {
+    border: none;
+    margin-bottom: 0.5rem;
+    /* background-color: thistle; */
+}
+.temp_form legend {
+    font-size: 1rem;
+    margin-bottom: 0.7rem;
+    padding-left: 0;
+    position: relative;
+    top: 0.7rem;
+}
+.temp_label_inline {
+    display: inline-block;
+    width: 120px;
+}
+.temp_label_checkbox {
+    display: inline-block;
+    width: 160px;
+}
+.temp_form textarea {
+    display: block;
+    padding-left: 0.5rem;
+    box-sizing: border-box;   
+}
+.temp_form input {
+    padding-left: 0.5rem;
+    margin-bottom: 0.3rem;
+    box-sizing: border-box;
+    width: 200px;
+}
+.temp_form textarea:focus,
+.temp_form input:focus {
+    box-shadow: 2px 2px 3px rgb(148, 161, 230);
+}
+
+.temp_form input[type="text"] {
+
+}
+.temp_form input[type="password"] {
+    
+}
+.temp_radio_block {
+    display: flex;
+    flex-direction: column;
+}
+.temp_radio_button {
+    display: block;
+}
+.temp_radio_block label {
+    display: inline-block;
+    width: 100px;
+}
+.temp_form input[type="radio"] {
+    width: 30px;
+}
+.temp_form input[type="checkbox"] {
+    width: 30px;
+}
+.temp_form input[type="submit"],
+.temp_form input[type="reset"] {
+    display: inline-block;
+    width: 100px;
+    height: 2rem;
+    border-radius: 2px;
+    border-color: transparent;
+}
+.temp_form input[type="submit"]:hover,
+.temp_form input[type="reset"]:hover {
+    background-color: rgb(137, 176, 228);
+}
+.temp_form select {
+    padding: 0.3rem 0.2rem;
+    width: 140px;
+}
